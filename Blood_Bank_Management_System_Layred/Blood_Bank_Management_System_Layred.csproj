@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A61B0E18-4D73-42DA-AA2C-A292AD9BCE4B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Blood_Bank_Management_System_Layred</RootNamespace>
+    <AssemblyName>Blood_Bank_Management_System_Layred</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2">
+      <HintPath>E:\01 - Study\6th Semester\Software Construction and Development\Theory\Final Project\Designing\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\HMangerBL.cs" />
+    <Compile Include="BL\LoginBL.cs" />
+    <Compile Include="BL\NewDonorBL.cs" />
+    <Compile Include="BL\StockBL.cs" />
+    <Compile Include="DL\DBConnection.cs" />
+    <Compile Include="DL\HMangerDL.cs" />
+    <Compile Include="DL\LoginDL.cs" />
+    <Compile Include="DL\NewDonorDL.cs" />
+    <Compile Include="DL\SQLConnection.cs" />
+    <Compile Include="DL\StockDL.cs" />
+    <Compile Include="DTO\HMangerDTO.cs" />
+    <Compile Include="DTO\HMBloodAmmount.cs" />
+    <Compile Include="DTO\LoginDTO.cs" />
+    <Compile Include="DTO\NewDonorDTO.cs" />
+    <Compile Include="DTO\StockDTO.cs" />
+    <Compile Include="GUI\AddNewDonor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddNewDonor.Designer.cs">
+      <DependentUpon>AddNewDonor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AdminMainGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AdminMainGUI.Designer.cs">
+      <DependentUpon>AdminMainGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AdminRequestTables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AdminRequestTables.Designer.cs">
+      <DependentUpon>AdminRequestTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DecreaseStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DecreaseStock.Designer.cs">
+      <DependentUpon>DecreaseStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DeleteDonor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DeleteDonor.Designer.cs">
+      <DependentUpon>DeleteDonor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DonorMainGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DonorMainGUI.Designer.cs">
+      <DependentUpon>DonorMainGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HManager.Designer.cs">
+      <DependentUpon>HManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HMRequestBloodGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HMRequestBloodGroup.Designer.cs">
+      <DependentUpon>HMRequestBloodGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HMSearchByAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HMSearchByAddress.Designer.cs">
+      <DependentUpon>HMSearchByAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HMSearchByLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HMSearchByLocation.Designer.cs">
+      <DependentUpon>HMSearchByLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\IncreaseStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\IncreaseStock.Designer.cs">
+      <DependentUpon>IncreaseStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LoginGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LoginGUI.Designer.cs">
+      <DependentUpon>LoginGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SearchByAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SearchByAddress.Designer.cs">
+      <DependentUpon>SearchByAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SearchByBloodGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SearchByBloodGroup.Designer.cs">
+      <DependentUpon>SearchByBloodGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\StockDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\StockDetails.Designer.cs">
+      <DependentUpon>StockDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UpdateDonor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UpdateDonor.Designer.cs">
+      <DependentUpon>UpdateDonor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ViewAllDonorsDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ViewAllDonorsDetails.Designer.cs">
+      <DependentUpon>ViewAllDonorsDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\WrongUserGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\WrongUserGUI.Designer.cs">
+      <DependentUpon>WrongUserGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\AddNewDonor.resx">
+      <DependentUpon>AddNewDonor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AdminMainGUI.resx">
+      <DependentUpon>AdminMainGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AdminRequestTables.resx">
+      <DependentUpon>AdminRequestTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DecreaseStock.resx">
+      <DependentUpon>DecreaseStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DeleteDonor.resx">
+      <DependentUpon>DeleteDonor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DonorMainGUI.resx">
+      <DependentUpon>DonorMainGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HManager.resx">
+      <DependentUpon>HManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HMRequestBloodGroup.resx">
+      <DependentUpon>HMRequestBloodGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HMSearchByAddress.resx">
+      <DependentUpon>HMSearchByAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HMSearchByLocation.resx">
+      <DependentUpon>HMSearchByLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\IncreaseStock.resx">
+      <DependentUpon>IncreaseStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LoginGUI.resx">
+      <DependentUpon>LoginGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SearchByAddress.resx">
+      <DependentUpon>SearchByAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SearchByBloodGroup.resx">
+      <DependentUpon>SearchByBloodGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\StockDetails.resx">
+      <DependentUpon>StockDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UpdateDonor.resx">
+      <DependentUpon>UpdateDonor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ViewAllDonorsDetails.resx">
+      <DependentUpon>ViewAllDonorsDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\WrongUserGUI.resx">
+      <DependentUpon>WrongUserGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\locker.gif" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="BBMS.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BBMS_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>BBMS.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\bloodDrop.png" />
+    <None Include="Resources\Gradient_builder_2 copy.png" />
+    <None Include="Resources\search1.png" />
+    <None Include="Resources\forbidden copy.png" />
+    <None Include="Resources\Exit application.png" />
+    <None Include="Resources\print.png" />
+    <None Include="Resources\Close.png" />
+    <None Include="Resources\Update details1.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\Dec.png" />
+    <None Include="Resources\Inc.png" />
+    <None Include="Resources\Blood group.png" />
+    <None Include="Resources\Location.png" />
+    <None Include="Resources\Details.png" />
+    <None Include="Resources\Update details.png" />
+    <None Include="Resources\Add new.png" />
+    <None Include="Resources\LogOut2.png" />
+    <None Include="Resources\delete donor.png" />
+    <None Include="Resources\search user.png" />
+    <None Include="Resources\stock.png" />
+    <None Include="Resources\Donor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
